@@ -1,0 +1,14 @@
+@-moz-document domain('ohtuleht.ee') {
+
+DIV.image-gallery.noFullScreen .image-gallery-slide-wrapper::before {padding-top:0px;}
+
+/* This fixes image disappearing in New Moon 27,6,0 | K., 08.04.2020. */
+DIV.imageGallery--oneImage .image-gallery-slide img {position:relative;}
+
+/* Paywall fadeout removal | T., 07.04.2020. */
+DIV.article-main--order::before {display:none;}
+
+/* ARTICLE BODY TEXT | T., 07.04.2020. */
+DIV.formatted--content.article-main--content {font-size:91%;}
+
+}
