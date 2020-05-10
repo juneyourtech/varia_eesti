@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
-// @name        Õhta
+// @name        Õhtu
 // @namespace   slol_rez
-// @description Õhtalehe disainipläkkide parandamine
+// @description Õhtulehe disainipläkkide parandamine
 // @include     *.ohtuleht.ee/*
 // @updateURL https://raw.githubusercontent.com/juneyourtech/varia_eesti/master/slol_rez.user.js
 // @version     0.1.1
