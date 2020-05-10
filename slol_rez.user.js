@@ -13,7 +13,7 @@
 /* This fixes excessive padding in pictures. | T., 07.04.2020. */
 GM_addStyle("DIV.image-gallery.noFullScreen .image-gallery-slide-wrapper::before {padding-top:0px;}");
 
-/* This fixes image disappearing in New Moon 27,6,0 | K., 08.04.2020. */
+/* This fixes image disappearing in New Moon 27.6.0 | K., 08.04.2020. */
 GM_addStyle("DIV.imageGallery--oneImage .image-gallery-slide img {position:relative;}");
 
 /* Paywall fadeout removal | T., 07.04.2020. */
