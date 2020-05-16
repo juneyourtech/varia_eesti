@@ -1,0 +1,375 @@
+@-moz-document domain('delfi.ee') {
+/* One of the origin dates: P., 24.03.2019 */
+
+*, HTML, HTML > BODY, HTML > BODY *, HTML > BODY *:before, HTML > BODY *:after {transform:none !important; transition:none !important; animation:none !important; will-change:unset !important;}
+
+/* 06.06.2019 */
+BODY.is-old-browser {overflow:auto;}
+
+/* "Loading page" | 12.03.2020. */
+DIV.loading-page, DIV.loading-page[data-v-457451f9] {display:none !important; position:relative !important; top:0px !important; left:unset; width:76px !important; height:24px !important; z-index:3 !important; overflow:auto; border:solid 3px black; float:right;}
+
+/* "Loading page" spinner | 12.03.2020. */
+DIV.spinner, DIV.spinner[data-v-457451f9] {display:none !important; transform:none !important; position:relative !important; top:unset !important; left:unset !important; text-align:center;}
+
+/* "Loading page" spinner bouncers | 12.03.2020. */
+DIV.spinner > DIV, DIV.spinner > DIV[data-v-457451f9], DIV.spinner > DIV[class*="bounce"] {display:none !important; animation-delay:unset; animation:none !important;}
+
+/* HEADERS | P., 10.05.2020. | Layout: Fixes horizontal scrollbar issue. */
+HTML > BODY:not(.responsive) #main, HTML > BODY:not(.responsive) #footer, HTML > BODY:not(.responsive) #header {min-width:640px;}
+
+/* MAIN overflow */
+HTML > BODY:not(.responsive) #main {overflow:auto;}
+
+/* HEADERS | E., 06.04.2020. */
+HEADER.header {height:24px;}
+
+/* HEADERS | Added: E., 06.04.2020. */
+HEADER.sticky-elm .header-main {height:24px; flex-flow:row;}
+/* P., 10.05.2020.: +flex-flow; */
+
+/* HEADER (sticky) hamburger menu | P., 10.05.2020. */
+A.header__menu-burger {margin-left:18px;}
+
+/* HEADER | P., 10.05.2020. */
+DIV.navigation.col.col--no-gutter > A:first-child {padding-left:0px;}
+
+/* HELPER RIBBON (whatever that is, but it seems to be sticky, too) | P., 10.05.2020. */
+DIV.helper-ribbon .content {padding-left:0px;}
+
+/* Some HEADER IFRAME | P., 10.05.2020. */
+DIV.content.header__main > IFRAME {height:24px !important;}
+
+
+/* AD: BIG "DELFI COUNTDOWN" SPLASH AFTER HEADER | P., 10.05.2020. */
+DIV#delfi-countdown {width:100%; min-width:640px; max-width:1000px; background-position:center; background-size:cover;}
+/* Original width:1000px; */
+
+/* AD: BIG "DELFI COUNTDOWN" SPLASH AFTER HEADER | COUNTDOWN COUNTER | P., 10.05.2020. */
+DIV#delfi-countdown .countdown {display:none; position:relative; right:unset; top:unset; float:right;}
+
+DIV#delfi-countdown:before {display:inline; content:'Liiguta kursor üle pakkumise,\\A et näha, palju aega on jäänud.';position:relative; float:right; white-space:pre-wrap; color:yellow;}
+DIV#delfi-countdown:hover:before {display:none;}
+
+DIV#delfi-countdown:hover .countdown {display:inline;}
+
+/* header: Korvpall > EM 2021 / Eesti... / Paf Liiga / NBA / Euroliiga ... */
+DIV.content.channel-navigation {width:auto; max-width:1024px;}
+
+/* mucho contento after headers, 26.12.2019. */
+DIV#main {background-color:inherit;}
+DIV#main.content {display:block; width:auto; min-width:750px; max-width:1024px; margin-top:15px; padding-left:0px;}
+/* E., 06.04.2020. */
+/* E., 04.05.2020.: display was: inline-block;
+   P., 10.05.2020.: +padding-left; */
+
+/* FRONTPAGE | P., 10.05.2020. | Fixes layout issues. */
+DIV.row {margin-left:0px; margin-right:0px;}
+
+/* FRONTPAGE | P., 10.05.2020. | Fixes layout: horizontal scrollbar */
+DIV[id*="dwidget"] {overflow-x:auto;}
+
+/* FRONTPAGE | BIG STORY AT THE TOP | E., 11.05.2020. | Fixes white text on light background issues. */
+ARTICLE.headline--title-over .headline__title A {text-shadow:0px 2px 1px rgba(0, 0, 0, 1.0); background-color:rgba(0,0,0,0.4);}
+
+/* FRONTPAGE | BIG STORY AT THE TOP | E., 11.05.2020. | Inherit background color, make it the border. */
+DIV.headlines--breaking-news__wrap {background-color:inherit; border:solid 1px #F0F2F5;}
+
+/* FRONTPAGE | ASSOCIATED ARTICLE LINK COLORS UNDER BIG STORY | BLUE | E., 11.05.2020. */
+H5.headline__related-title a:first-child {color:blue;}
+/* E., 11.05.2020: color was : #0372dd; */
+
+/* FRONT PAGE | NAMED SECTION "ostetuimad lood", ARTICLE LINKS WITH PICTURES BELOW | L., 16.05.2020. */
+SECTION.row {margin-left:0px; margin-right:0px;}
+/* This fixes an issue, where there's a "colspanned" picture link connected to two lower-pictured article links. This fixes the horizontal scrollbar. */
+
+/* FRONTPAGE | ARTICLE LINKS WITH PICTURES | L., 16.05.2020. */
+DIV.col.col-12 > ARTICLE.headline.headline--title-over {margin-bottom:1px;}
+
+/* FRONTPAGE | ARTICLE LINKS WITH PICTURES | E., 11.05.2020. */
+DIV.col:not(:last-child):not(.col-12) > ARTICLE.headline {margin-right:1px;}
+/* The DIV.col-col-3 selector cannot be used, because it will cause the fourth picture link to wrap.
+:not(:last-child) is obvious.
+L., 16.05.2020. :not(.col-12) fixes an issue, where a single "colspanned" picture link has right margin for no good reason.
+*/
+
+/* FRONTPAGE: article links in 2/3 formation (two above, three below) | L., 16.05.2020. */
+DIV.col.col-6 ~ DIV.col-6 > ARTICLE.headline {margin-right:0px;}
+/* Fixes the last-child thing in row 1. */
+
+/* FRONTPAGE: article links in 2/3/2 formation (two above, three below, two below) | L., 16.05.2020. */
+DIV.col.col-6 ~ DIV.col.col-4 ~ DIV.col.col-6 > ARTICLE.headline {margin-right:1px;}
+/* Fixes an issue, where the next two pictured links are not separated. */
+
+/* FRONTPAGE: article links in 2/3/_2_ formation (two above, three below, two below) | L., 16.05.2020. */
+DIV.col.col-6 ~ DIV.col.col-4 ~ DIV.col.col-6 ~ DIV.col.col-6 > ARTICLE.headline {margin-right:0px;}
+/* Fixes the margin for the last one in the row in 2/3/_2_ formation. */
+
+/* FRONTPAGE | ARTICLE LINKS WITH PICTURES | ARTICLE LINKS' location relative to picture | K., 13.05.2020. | Linux */
+DIV.headline__content {padding-top:0px; padding-right:1px; padding-bottom:3px;}
+
+/* FRONTPAGE | ARTICLE LINKS WITH PICTURES | ARTICLE LINKS' location relative to picture for smaller headlines | K., 13.05.2020. | Linux */
+DIV.col .col-4 .headline__content {padding-top:0px; padding-bottom:3px;}
+
+/* FRONTPAGE | ARTICLE LINKS WITH PICTURES | ARTICLE LINKS' smaller headlines' additional text | K., 13.05.2020. | Linux */
+A[class^="headline__features--"] {padding-top:0px;}
+
+/* FRONTPAGE | SUUR VALGE LÄRAKAS "VIHJA | UUDISKIRI | JÄLGI" | container | K., 13.05.2020. | Linux. */
+DIV.sss-ribbon-2019 {margin-bottom:0px; border:solid 1px white;}
+
+/* FRONTPAGE | SUUR VALGE LÄRAKAS "VIHJA | UUDISKIRI | JÄLGI" | items | K., 13.05.2020. | Linux. */
+BUTTON.sss-ribbon-2019_tab--button {background-color:inherit; padding-top:5px; padding-bottom:5px;}
+
+/* FRONTPAGE | SUUR VALGE LÄRAKAS "VIHJA | UUDISKIRI | JÄLGI" | pictures | K., 13.05.2020. | Linux. */
+DIV.sss-ribbon-2019_tab I {margin-bottom:10px;}
+
+/* FRONTPAGE | AD CONTAINER (peale SUURT VALGET LÄRAKAT) | K., 13.05.2020. | Linux */
+DIV.ad-container {padding-top:10px; padding-bottom:10px;}
+/* Original was: 24px top & bottom. */
+
+
+/* ARTICLE, 26.12.2019. */
+ARTICLE.article:not(.article--wide) .article__content {margin:0px 0px; display:inline-table;}
+/* E., 06.04.2020.: +display */
+
+/* article body container | 26.12.2019. */
+DIV.col {padding-top:0px; padding-bottom:0px; padding:0px;}
+/* E., 06.04.2020: +padding (temporary) */
+
+/* article picture | 26.12.2019. */
+FIGCAPTION.picture__caption {padding-top:0px; padding-bottom:0px;}
+/* Markkanen */
+/* ARTICLE PICTURE CAPTION | T., 07.01.2020. */
+HTML > BODY:not(.ch-foto) .picture__caption {color:black;}
+
+/* ARTICLE LEDE | R., 15.05.2020. */
+DIV.col.article__content > P.article__chunk {display:inline-block; padding-left:1px;}
+
+/* article body text, 26.12.2019. */
+P.article__chunk, DIV.article__body > P {margin-left:0px;}
+DIV.article__body > P {font-weight:normal; color:black; font-family:'Arial','Helvetica','Helv','sans-serif','Roboto';}
+
+/* article body links */
+DIV.article__body P A {color:blue;}
+DIV.article__body P A:visited {color:navy; text-decoration:underline;}
+
+/* BODY TEXT (article text) font fix to something better than font anorexia. */
+DIV.article .article__paywall {font-weight:normal;}
+/* T., 29.10.2019. */
+
+/* LINKS in article text */
+DIV.article .article__paywall A {color:navy; text-decoration:underline;}
+/* T., 29.10.2019. */
+
+/* LINKS in article text */
+DIV.article .article__paywall A:visited {color:navy; text-decoration-color:fuchsia;}
+/* T., 29.10.2019. */
+
+/* Embeds, 26.12.2019*/
+ARTICLE#article .customcode-embed_code, ARTICLE#article .fb_iframe_widget:not(.fb-share-button):not(.dlu-fb):not(.fb-comments):not(.fb-video), ARTICLE#article .customcode-embed_code > SPAN, ARTICLE#article .fb_iframe_widget:not(.fb-share-button):not(.dlu-fb):not(.fb-comments):not(.fb-video) > SPAN, ARTICLE#article .customcode-embed_code > SPAN > IFRAME, ARTICLE#article .fb_iframe_widget:not(.fb-share-button):not(.dlu-fb):not(.fb-comments):not(.fb-video) > SPAN > IFRAME {margin-left:0px; transform:none; padding-left:0px;}
+
+
+/* P., 24.03.2019 adblock notification */
+HEADER > DIV.notification-header, DIV#ab-notification-header {height:34px !important; overflow-y:scroll; display:block !important; background-color:transparent; margin-bottom:0px !important; min-width:240px;}
+HEADER > DIV.notification-header:hover {height:171px !important;}
+DIV.notification-header__content, DIV.notification-old-header__content content {padding:0px; display:block !important; background-color:transparent; max-width:644px; width:100%;}
+DIV.notification-header__btn-block {padding:0px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | container | P., 05.04.2020. */
+HTML > BODY.adb-curtain {overflow:auto !important;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | container | P., 05.04.2020. */
+DIV#ab--notification-header.notification-header {display:inline-block; position:absolute; top:139px; right:0px; left:unset; z-index:unset;} /*was: 713px*/
+/* calc was 689px*/
+/*width:calc(100% - 835px); */
+
+/* 1155 + 15px = 1170+1 */
+@media only screen and (min-width:1171px) { DIV#ab--notification-header.notification-header {width:calc(100% - 835px);} }
+
+/* 1155 + 15px = 1170 */
+@media only screen and (max-width:1170px) { DIV#ab--notification-header.notification-header {width:calc(100% - 767px);} }
+
+/* 1086 + 15 = 1101 */
+@media only screen and (max-width:1101px) { DIV#ab--notification-header.notification-header {width:calc(100% - 733px);} }
+
+/* 1053 + 15 = 1068 */
+@media only screen and (max-width:1068px) { DIV#ab--notification-header.notification-header {width:calc(100% - 717px);} }
+
+/* 1036 + 15 = 1051 */
+@media only screen and (max-width:1051px) { DIV#ab--notification-header.notification-header {width:calc(100% - 707px);} }
+
+/* 1026 + 15 = 1041 */
+@media only screen and (max-width:1041px) { DIV#ab--notification-header.notification-header {width:calc(100% - 701px);} }
+
+/* 1019 + 15 = 1034 */
+@media only screen and (max-width:1036px) { DIV.notification-header__title H1 {font-size:25px;} }
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | header title: "zomg kasutad reklaamiblokeerijat blah blah" | P., 05.04.2020. */
+DIV.notification-header__title {padding:0px 1px; margin-top:1px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | header title: "zomg kasutad reklaamiblokeerijat blah blah" | P., 06.04.2020. */
+DIV.notification-header__title H1 {padding-top:5px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | header title: "zomg kasutad reklaamiblokeerijat blah blah" | P., 06.04.2020. */
+DIV.notification-header__title P {clear:both; margin-bottom:0px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | crown in the middle (\|/) | P., 05.04.2020. */
+DIV.notification-header__crown {position:relative; top:unset; left:unset; right:unset; float:left;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | container | P., 05.04.2020. */
+DIV.notification-header {overflow:auto; align-items:unset; height:auto;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | sulgemisnupp | close button | (X) | P., 05.04.2020. */
+BUTTON#notification-close {position:relative; top:unset; right:unset; float:right; border:2px solid white; border-radius:15px; line-height:26px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | pakettide veergude konteiner | R., 15.05.2020. */
+DIV.notification-header__cta {overflow-x:auto;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items | E., 06.04.2020. */
+DIV.notification-header__cta--box {margin:0px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items: pakettide nimetused/tüübid | R., 15.05.2020. */
+DIV.notification-header__cta--title {padding:1px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items: price ("ühik/kuus") | R., 15.05.2020. */
+DIV.notification-header__cta--price {padding:15px 5px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items | E., 06.04.2020. */
+DIV.notification-header__cta--box:first-child {margin-right:1px;}
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items' body text | E., 06.04.2020. */
+DIV.notification-header__cta--description {padding:0px 1px 12px;} /*top0 left&right bottom */
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items' buttons | E., 06.04.2020. */
+DIV.notification-header__cta--order A {padding:5px 10px;}
+/* was: 11px 25px; 
+R., 15.05.2020.: padding: 5px 10px */
+
+/* "ORDER OUR RAG" notification | Delfi Kogupakett | items' small print after button | E., 06.04.2020. */
+DIV.notification-header__cta--caption {padding:12px 1px 0px}
+/* top0 left & right bottom */
+
+/* "ORDER OUR RAG" notification | "Lisan erandi" | R., 15.05.2020. */
+DIV.notification-header__instructions {padding:10px 1px;}
+
+/* "ORDER OUR RAG" notification | "Mõistame, et ..." | R., 15.05.2020. */
+DIV.notification-header__caption {padding:5px;}
+
+/* "ZOMG UNBLOCK US ON ADBLOCKER AND ORDER OUR RAG" NOTIFICATION (04.05.2020.)" */
+DIV.notification-old-header {display:block !important; height:32px !important; margin-bottom:0px !important; overflow-y:scroll;}
+DIV.notification-old-header:hover {height:251px !important;}
+
+/* "ZOMG UNBLOCK US ON ADBLOCKER AND ORDER OUR RAG" NOTIFICATION (04.05.2020.)" */
+DIV.notification-old-header__content content {padding:0px;}
+
+/* FRONTPAGE: CONTENT */
+/* DIV.slick-initialized .slick-slide */
+
+/* IN-ARTICLE: SISUTURUNDUS (04.05.2020) */
+DIV.col.article__content ~ DIV.col.col-300 {position:relative; display:inline; float:right; position:absolute; z-index:1; right:unset; flex:unset;}
+
+/* IN-ARTICLE: SISUTURUNDUS (04.05.2020) */
+DIV.sliding-torn-001.is-set-sticky.sticky-elm {top:unset !important; bottom:unset !important; }
+
+/* IN-ARTICLE: SISUTURUNDUS PILDID (04.05.2020) */
+DIV.cmb-tower .col {padding:1px 1px !important;}
+
+DIV.cmb-tower > DIV.row {margin-right:0px !important; margin-left:0px !important;}
+
+/* CONTENT */
+DIV.content.header__main > DIV.row, DIV.content > ARTICLE.row, DIV.cmb-after-article > DIV.row, DIV[class][style] > DIV.row.headlines-wide {margin-left:0px; margin-right:0px;} /* affects several separate elements */
+
+DIV.content {padding-left:0px; padding-right:1px; width:100%;}
+DIV#main.content {padding-right:0px} /* L., 16.05.2020. */
+/* P., 10.05.2020.: +padding-left. Affects sticky header and article content. */
+
+/* E., 24.03.2020. LIVEBLOG / OTSEBLOGI | LIVEBLOG ITEM */
+DIV.dlu-message {padding-top:0px;}
+
+/* E., 24.03.2020. LIVEBLOG / OTSEBLOGI | TEXT */
+DIV.dlu-message.has-attachment .dlu-text {line-height:1.5em;}
+
+/* "order this paper" */
+DIV.col-12 {padding-top:0px; padding-bottom:0px;}
+DIV.title_disclaimer {padding:0px; min-height:15px; font-size:10px; width:242px; background-color:transparent; border-top:solid 1px #F5F6F7; border-bottom:solid 1px #F5F6F7; margin-left:auto; margin-right:auto;}
+DIV.title_disclaimer STRONG {font-weight:normal; color:Silver !important;}
+
+/* paywall fader P., 24.03.2019 */
+DIV.pyfe-teaser-box .teaser-fader {top:0px; height:25px; border-top:solid 1px Silver; background:transparent linear-gradient(to bottom, rgba(192, 192, 192, 0.5) 0px, #FFF 100%);}
+
+/* OLD BROWSER notfication | 06.06.2019 */
+DIV.oldbrowser {display:inline-block; position:relative; top:unset; left:unset; clear:both; height:auto; min-height:205px; overflow-y:auto; z-index:1;}
+/* T., 17.12.2019.: +position, top, left, clear, height, min-height, overflow-y, z-index. */
+
+/* OLD BROWSER container | T., 17.12.2019. */
+DIV.oldbrowser__container {top:12px;}
+
+/* OLD BROWSER wrapper | T., 17.12.2019. */
+DIV.oldbrowser__wrapper {margin-bottom:0px;}
+
+/* COMMENTS BIG CONTAINER; 26.12.2019. */
+DIV#appComments.template-default .chat-wrapper {background-color:inherit;}
+
+/* COMMENT ROW */
+DIV#appComments.template-default .chat-wrapper .comment-row {flex:none; padding:0px; background-color:white;}
+/* 02.01.2020: set background-color from white to inherit, then back to white. */
+
+/* Comments | N., 05.12.2019. | Replies to comments (section) */
+DIV#appComments.template-default .chat-wrapper .has-reply {margin-left:20px;}
+
+/* COMMENTS | N., 05.12.2019. | Comment item */
+DIV#appComments.template-default .chat-wrapper .comment-reply {padding-left:4px;}
+
+/* Anonymous comment avatar ; 26.12.2019. */
+DIV#appComments .comment-avatar {outline:unset;}
+/* DIV#appComments.template-default .comment-anonymous, #appComments.template-default .input-avatar SPAN {background-color:transparent;} */
+
+/* Avatar icon border | T., 31.12.2019. */
+DIV#appComments .comment-avatar SPAN {border:solid 1px gray;}
+
+DIV#appComments.template-default .chat-wrapper .comment-body {margin-bottom:0px;}
+
+/* Comments | N., 05.12.2019. | comment author/subject */
+DIV#appComments.template-default .chat-wrapper .comment-subject {display:inline; overflow:visible;}
+
+/* Comments | N., 05.12.2019. | comment time */
+DIV#appComments .comment .created-time {color:black; font-size:11px;}
+DIV#appComments.template-default .chat-wrapper .comment .created-time {margin-top:0px; margin-bottom:0px; display:inline; margin-left:5px;}
+
+/* Report comment link | "Raporteeri" | 02.01.2020. */
+DIV#appComments .comment .report-comment.as-link {z-index:0; transition:none; font-family:'Arial','sans-serif','Roboto';}
+DIV#appComments.template-default .report-comment:after {transition:none; background-color:transparent;}
+
+/* Comment text | N., 05.12.2019. */
+DIV#comments-listing * {font-weight:normal; color:black;}
+/* font-family:'Arial','Helvetica','Helv','sans-serif','Roboto' !important;*/
+/* 26.12.2019: code was fixed, bu Roboto looks better. Added font-weight an color instead. */
+
+/* comments | reactions | N., 05.12.2019. */
+DIV#appComments.template-default .chat-wrapper .comment-body P, DIV#appComments.template-default .chat-wrapper .comment-body SPAN {font-size:14px;}
+
+/* comments | reactions | N., 05.12.2019. */
+DIV#appComments .comment-actions {margin-top:0px; margin-bottom:0px;}
+
+/* comments | reactions | N., 05.12.2019. */
+DIV#appComments .comment .reaction {transition:none;}
+
+/* commenta | reactions | "reageeri" / "reageeritud" link | T., 31.12.2019.*/
+DIV#appComments.template-default .reaction-btn:before {transition:none;}
+
+DIV#appComments.template-default .chat-wrapper UL.reactions:hover LI {margin-right:5px;}
+
+/* comments | reactions total count | N., 05.12.2019. */
+DIV#appComments .comment-actions UL LI {color:black;}
+
+/* COMMENTS SEPARATOR (ads) | Assume, that you have an adblocker. */
+DIV#appComments.template-default .chat-wrapper .comment-adPlace.col-324 {flex:none; margin-right:1px; padding:0px; border:solid 1px gray;}
+DIV#appComments.template-default .chat-wrapper .comment-adPlace.col-wide {margin-top:0px; margin-bottom:0px; flex:none; padding:0px; border-top:solid 1px Silver;}
+
+/*COMMENTS AD BEFORE COMMENT INPUT | T., 31.12.2019. */
+DIV#appComments.template-default .chat-wrapper .comment-adPlace.col-324.last-ad {order:4; position:absolute; right:0px;}
+
+/* FOOTER | E., 06.04.2020. */
+FOOTER#footer > DIV.content > DIV.row {margin-left:0px; margin-right:0px;}
+}
+
