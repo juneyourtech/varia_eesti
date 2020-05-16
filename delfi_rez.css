@@ -266,7 +266,7 @@ DIV.notification-old-header__content content {padding:0px;}
 /* DIV.slick-initialized .slick-slide */
 
 /* IN-ARTICLE: SISUTURUNDUS (04.05.2020) */
-DIV.col.article__content ~ DIV.col.col-300 {position:relative; display:inline; float:right; position:absolute; z-index:1; right:unset; flex:unset;}
+DIV.col.article__content ~ DIV.col.col-300 {display:inline; float:right; position:absolute; z-index:1; right:unset; flex:unset;}
 
 /* IN-ARTICLE: SISUTURUNDUS (04.05.2020) */
 DIV.sliding-torn-001.is-set-sticky.sticky-elm {top:unset !important; bottom:unset !important; }
@@ -334,7 +334,7 @@ DIV#appComments.template-default .chat-wrapper .comment-subject {display:inline;
 
 /* Comments | N., 05.12.2019. | comment time */
 DIV#appComments .comment .created-time {color:black; font-size:11px;}
-DIV#appComments.template-default .chat-wrapper .comment .created-time {margin-top:0px; margin-bottom:0px; display:inline; margin-left:5px;}
+DIV#appComments.template-default .chat-wrapper .comment .created-time {display:inline; margin-top:0px; margin-bottom:0px; margin-left:5px;}
 
 /* Report comment link | "Raporteeri" | 02.01.2020. */
 DIV#appComments .comment .report-comment.as-link {z-index:0; transition:none; font-family:'Arial','sans-serif','Roboto';}
