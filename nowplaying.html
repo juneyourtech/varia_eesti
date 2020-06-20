@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META ID="viewport" NAME="viewport" CONTENT="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=1"><!--initial-scale was 1.1 -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script language="JavaScript" type="text/javascript">
+function get_rds(channelname) {
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var rds_sisu = JSON.parse(this.responseText);
+    
+    document.getElementById("nowplaying_json").innerHTML = rds_sisu.rds + " \• Saade: " + rds_sisu.program + " \• Saatejuht:" + rds_sisu.host;
+    }
+  };
+
+xmlhttp.open("GET", "https://otse.err.ee/api/rds/getForChannel?channel=" + channelname, true);
+xmlhttp.send(); 
+
+};
+</script>
+<STYLE TYPE="text/css">
+A {padding:10px; background-color:#409fff; color:black; line-height:2.9em;}
+iframe#nowplaying {background-color:#ccf; font-size:14px; white-space:pre-wrap; word-break:break-word; overflow-x:scroll;} 
+/* Keep in mind, that page background, font color and size are manipulated by a userstyle, so the styles herein are not particularly effective. Page background color works with !important. */
+</STYLE>
+<TITLE>Now Playing (to device width)</TITLE>
+<body bgcolor=black TEXT=Silver LINK="#409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
+<DIV ID="nowplaying_json" STYLE="color:#99ccFF;"></DIV><!--content goes here-->
+<A HREF="javascript:get_rds('raadio2');">R2</A> 
+<A HREF="javascript:get_rds('raadiotallinn');">R.Tallinn</A> 
+<A HREF="javascript:get_rds('vikerraadio');">Vikerraadio</A> 
+<A HREF="javascript:get_rds('klassikaraadio');">Klassikaraadio</A> 
+<A HREF="javascript:get_rds('raadio4');">R4</A>
+<!--Classic links:
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" TARGET="nowplaying">R2</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" TARGET="nowplaying">R. Tallinn</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=vikerraadio" TARGET="nowplaying">Vikerraadio</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" TARGET="nowplaying">Klassikaraadio</A>
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" TARGET="nowplaying">R4</A> -->
+<p>
+Raadio Tallinn 103,5 MHz<br>
+R4 — 94,5 MHz<br>
+MyHits — 97,2 MHz<br>
+Sky Plus — 95,4 MHz<br>
+Star FM — 96,6 MHz
+<p>
+/Sagedusalad Tallinnas
+</body>
+</html>
