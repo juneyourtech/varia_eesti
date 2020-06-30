@@ -28,18 +28,26 @@ iframe#nowplaying {background-color:#ccf; font-size:14px; white-space:pre-wrap; 
 </STYLE>
 <TITLE>Now Playing (to device width)</TITLE>
 <body bgcolor=black TEXT=Silver LINK="#409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
+<NOSCRIPT>
+<iframe id="nowplaying" name="nowplaying" marginwidth="0" marginheight="0" src="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" frameborder="0" height=110 width="100%" scrolling="no" style="width:100%; margin:0px;"></iframe>
+</NOSCRIPT>
 <DIV ID="nowplaying_json" STYLE="color:#99ccFF;"></DIV><!--content goes here-->
-<A HREF="javascript:get_rds('raadio2');">R2</A> 
-<A HREF="javascript:get_rds('raadiotallinn');">R.Tallinn</A> 
-<A HREF="javascript:get_rds('vikerraadio');">Vikerraadio</A> 
-<A HREF="javascript:get_rds('klassikaraadio');">Klassikaraadio</A> 
-<A HREF="javascript:get_rds('raadio4');">R4</A>
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" onClick="javascript:get_rds('raadio2');return false;">R2</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" onClick="javascript:get_rds('raadiotallinn');return false;">R.Tallinn</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=vikerraadio" onClick="javascript:get_rds('vikerraadio');return false;">Vikerraadio</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" onClick="javascript:get_rds('klassikaraadio');return false;">Klassikaraadio</A> 
+<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" onClick="javascript:get_rds('raadio4');return false;">R4</A>
 <!--Classic links:
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" TARGET="nowplaying">R2</A> 
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" TARGET="nowplaying">R. Tallinn</A> 
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=vikerraadio" TARGET="nowplaying">Vikerraadio</A> 
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" TARGET="nowplaying">Klassikaraadio</A>
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" TARGET="nowplaying">R4</A> -->
+<NOSCRIPT>
+<P>
+<FONT COLOR=WHITE><B>JavaScript on väljas.</B></FONT>
+</P>
+</NOSCRIPT>
 <p>
 Raadio Tallinn 103,5 MHz<br>
 R4 — 94,5 MHz<br>
