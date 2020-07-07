@@ -1,9 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<HTML>
+<HEAD>
 <META ID="viewport" NAME="viewport" CONTENT="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=1"><!--initial-scale was 1.1 -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<script language="JavaScript" type="text/javascript">
+<META http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>Now Playing (to device width)</TITLE>
+<SCRIPT language="JavaScript" type="text/javascript">
 <!--//
 function get_rds(channelname) {
 
@@ -18,26 +19,34 @@ xmlhttp.onreadystatechange = function() {
   };
 
 xmlhttp.open("GET", "https://otse.err.ee/api/rds/getForChannel?channel=" + channelname, true);
-xmlhttp.send();
+xmlhttp.send(); 
 };
 //-->
-</script>
+</SCRIPT>
 <STYLE TYPE="text/css">
-A {padding:10px; background-color:#409fff; color:black; line-height:2.9em;}
 iframe#nowplaying {background-color:#ccf; font-size:14px; white-space:pre-wrap; word-break:break-word; overflow-x:scroll;} 
-/* Keep in mind, that page background, font color and size are manipulated by a userstyle, so the styles herein are not particularly effective. Page background color works with !important. */
+/* iframe page background, font color and size are manipulated by a userstyle, so the styles on this page are not particularly effective, as they won't apply to iframe contents. iframe page background color works with !important. */
+
+A, .button_contents {padding:10px; color:black; line-height:2.7em;}
+/* 07.07.2020: line-height was:2.9em. */
+
+A {background-color:#409fff;}
+
+.item {display:inline-block; float:left; margin-right:3px;}
+.mhz {display:block; text-align:center; font-size:90%;}
 </STYLE>
-<TITLE>Now Playing (to device width)</TITLE>
-<body bgcolor=black TEXT=Silver LINK="#409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
+</HEAD>
+<BODY bgcolor=black TEXT=Silver LINK="#409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
 <NOSCRIPT>
 <iframe id="nowplaying" name="nowplaying" marginwidth="0" marginheight="0" src="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" frameborder="0" height=110 width="100%" scrolling="no" style="width:100%; margin:0px;"></iframe>
 </NOSCRIPT>
 <DIV ID="nowplaying_json" STYLE="color:#99ccFF;"></DIV><!--content goes here-->
-<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" onClick="javascript:get_rds('raadio2');return false;">R2</A> 
-<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" onClick="javascript:get_rds('raadiotallinn');return false;">R.Tallinn</A> 
-<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=vikerraadio" onClick="javascript:get_rds('vikerraadio');return false;">Vikerraadio</A> 
-<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" onClick="javascript:get_rds('klassikaraadio');return false;">Klassikaraadio</A> 
-<A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" onClick="javascript:get_rds('raadio4');return false;">R4</A>
+<DIV CLASS="item" STYLE="text-align:right;"><A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" onClick="javascript:get_rds('raadio2');return false;">R2</A><SPAN CLASS="mhz">101,6</SPAN></DIV>
+<DIV CLASS="item"><A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" onClick="javascript:get_rds('raadiotallinn');return false;">R.Tallinn</A><SPAN CLASS="mhz">103,5</SPAN></DIV> 
+<DIV CLASS="item"><A HREF="https://otse.err.ee/api/rds/getForChannel?channel=vikerraadio" onClick="javascript:get_rds('vikerraadio');return false;">Vikerraadio</A><SPAN CLASS="mhz">104,1</SPAN></DIV> 
+<DIV CLASS="item"><A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" onClick="javascript:get_rds('klassikaraadio');return false;">Klassikaraadio</A><SPAN CLASS="mhz">106,6</SPAN></DIV> 
+<DIV CLASS="item"><A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" onClick="javascript:get_rds('raadio4');return false;">R4</A><SPAN CLASS="mhz">94,5</SPAN></DIV>
+<DIV CLASS="item"><SPAN CLASS="button_contents">&nbsp;</SPAN><SPAN CLASS="mhz">MHz</SPAN></DIV>
 <!--Classic links:
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" TARGET="nowplaying">R2</A> 
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadiotallinn" TARGET="nowplaying">R. Tallinn</A> 
@@ -45,13 +54,13 @@ iframe#nowplaying {background-color:#ccf; font-size:14px; white-space:pre-wrap; 
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=klassikaraadio" TARGET="nowplaying">Klassikaraadio</A>
 <A HREF="https://otse.err.ee/api/rds/getForChannel?channel=raadio4" TARGET="nowplaying">R4</A> -->
 <NOSCRIPT>
-<P>
+<P STYLE="clear:left;">
 <FONT COLOR=WHITE><B>JavaScript on väljas.</B></FONT>
 </P>
 </NOSCRIPT>
-<p>
-Raadio Tallinn 103,5 MHz<br>
-R4 — 94,5 MHz<br>
+<DIV STYLE="display:block; clear:both; margin:0px; padding:0px; height:1px;"></DIV>
+<p STYLE="clear:left;">
+Kuku — 100,7 MHz<br>
 MyHits — 97,2 MHz<br>
 Sky Plus — 95,4 MHz<br>
 Star FM — 96,6 MHz
