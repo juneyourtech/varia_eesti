@@ -27,16 +27,18 @@ xmlhttp.send();
 iframe#nowplaying {background-color:#ccf; font-size:14px; white-space:pre-wrap; word-break:break-word; overflow-x:scroll;} 
 /* iframe page background, font color and size are manipulated by a userstyle, so the styles on this page are not particularly effective, as they won't apply to iframe contents. iframe page background color works with !important. */
 
-A, .button_contents {padding:10px; color:black; line-height:2.7em;}
+DIV.item A, .button_contents {padding:10px; color:black; line-height:2.7em;}
 /* 07.07.2020: line-height was:2.9em. */
-
-A {background-color:#409fff;}
-
 .item {display:inline-block; float:left; margin-right:3px;}
+
+DIV.item A {background-color:#409fff; color:black;}
+
 .mhz {display:block; text-align:center; font-size:90%;}
+
+P {margin-top:7px;}
 </STYLE>
 </HEAD>
-<BODY bgcolor=black TEXT=Silver LINK="#409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
+<BODY bgcolor=black TEXT=Silver LINK="409Fff" ALINK=YELLOW VLINK="#0077EE" MARGINHEIGHT=0 MARGINWIDTH=0 STYLE="margin-top:1px; margin-left:1px; margin-right:1px;" onLoad="get_rds('raadio2');">
 <NOSCRIPT>
 <iframe id="nowplaying" name="nowplaying" marginwidth="0" marginheight="0" src="https://otse.err.ee/api/rds/getForChannel?channel=raadio2" frameborder="0" height=110 width="100%" scrolling="no" style="width:100%; margin:0px;"></iframe>
 </NOSCRIPT>
@@ -59,8 +61,11 @@ A {background-color:#409fff;}
 </P>
 </NOSCRIPT>
 <DIV STYLE="display:block; clear:both; margin:0px; padding:0px; height:1px;"></DIV>
+<P>
+<A HREF="https://otse.err.ee/k/saatekava/raadio" TARGET="new">ERR raadiote saatekavad</A>
+<BR><A HREF="https://otse.err.ee/k/saatekava/tele" TARGET="new">ERR telekanalite saatekavad</A></P>
 <p STYLE="clear:left;">
-Kuku — 100,7 MHz<br>
+Kuku — 100,7 MHz / <A HREF="https://otse.err.ee/k/saatekava/tele" TARGET="new">kavad</A><br>
 MyHits — 97,2 MHz<br>
 Sky Plus — 95,4 MHz<br>
 Star FM — 96,6 MHz
